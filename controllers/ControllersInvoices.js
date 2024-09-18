@@ -1,30 +1,30 @@
 
-import identModel from '../models/ModelsIdent.js'
+import invoiceModel from '../models/ModelsInvoices.js'
 
-export const getAllIdent = async (req, res) => {
+export const getAllInvoices = async (req, res) => {
     try{
-        const identificaciones = await identModel.findAll()
-        res.json(identificaciones)
+        const invoices = await invoiceModel.findAll()
+        res.json(invoices)
     } catch (error){
         res.json({message: error.message})
     }
 }
 
 
-export const getIdent = async (req, res) => {
+export const getInvoice = async (req, res) => {
     try {
-        const identificacion = await identModel.findAll({
+        const invoice = await invoiceModel.findAll({
             where:{id:req.params.id}
         })
-        res.json(identificacion[0])
+        res.json(invoice[0])
     } catch (error){
         res.json({message: error.message})
     }
 }
 
-export const createIdent = async (req, res) => {
+export const createInvoice = async (req, res) => {
     try{
-        await identModel.create(req.body)
+        await invoiceModel.create(req.body)
         res.json({
             "message":"Registro creado correctamente"
         })
@@ -33,9 +33,9 @@ export const createIdent = async (req, res) => {
     }
 }
 
-export const updateIdent = async (req, res) => {
+export const updateInvoice = async (req, res) => {
     try{
-        await identModel.update(req.body,{
+        await invoiceModel.update(req.body,{
             where:{id: req.params.id}
         })
         res.json({
@@ -46,9 +46,9 @@ export const updateIdent = async (req, res) => {
     }
 }
 
-export const deleteIdent = async(req, res) => {
+export const deleteInvoice = async(req, res) => {
     try{
-        await identModel.destroy({
+        await invoiceModel.destroy({
             where: {id: req.params.id}
         })
         res.json({

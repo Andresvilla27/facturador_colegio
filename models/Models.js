@@ -3,15 +3,15 @@ import db from "../database/db.js";
 //importamos sequelize
 import { DataTypes } from "sequelize";
 
-const novedadModel = db.define('novedades', {
+const studentModel = db.define('student', {
     id: { type: DataTypes.INTEGER, primaryKey: true },
     fecha: { type: DataTypes.TIME },
-    lugar: { type: DataTypes.STRING },
-    tipoNovedad: { type: DataTypes.STRING },
-    comisaria: { type: DataTypes.STRING },
-    unidad: { type: DataTypes.INTEGER },
-    personalInterv: { type: DataTypes.STRING },
-    resumen: { type: DataTypes.TEXT }
+    nombres: { type: DataTypes.STRING },
+    apellido: { type: DataTypes.STRING },
+    dni: { type: DataTypes.INTEGER },
+    grado: { type: DataTypes.INTEGER },
+    tutor: { type: DataTypes.STRING },
+    observaciones: { type: DataTypes.TEXT }
 },{
     timestamps: false
 })
@@ -19,4 +19,4 @@ const novedadModel = db.define('novedades', {
 
 
 
-export default novedadModel;
+export default studentModel;

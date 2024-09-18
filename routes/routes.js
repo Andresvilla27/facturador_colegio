@@ -1,15 +1,15 @@
 import express from "express";
-import { createNovedad, deleteNovedad, getAllNovedad, getNovedad, updateNovedad } from "../controllers/Controllers.js";
+import { createStudent, deleteStudent, getAllStudents, getStudent, updateStudent } from "../controllers/Controllers.js";
 
 
 
 const routes = express.Router()
 
-routes.get('/', getAllNovedad)
-routes.get('/:id', getNovedad)
-routes.post('/', createNovedad)
-routes.put('/:id', updateNovedad)
-routes.delete('/:id', deleteNovedad)
+routes.get('/', getAllStudents)
+routes.get('/:id', getStudent)
+routes.post('/', createStudent)
+routes.put('/:id', updateStudent)
+routes.delete('/:id', deleteStudent)
 
 
 export default routes;
