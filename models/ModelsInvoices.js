@@ -7,11 +7,10 @@ const invoiceModel = db.define('invoices', {
     nombres: { type:DataTypes.STRING },
     apellido: { type:DataTypes.STRING },
     dni: { type:DataTypes.INTEGER },
-    factura: { type:DataTypes.STRING },
+    factura: { type:DataTypes.INTEGER },
     importe: { type:DataTypes.INTEGER },
     mes_factura: { type:DataTypes.DATE },
-    cuenta_numero: { type: DataTypes.INTEGER},
-    img: { type:DataTypes.STRING }
+    cuenta_numero: { type: DataTypes.INTEGER}
 },{
     timestamps:false
 })  
